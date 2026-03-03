@@ -1,3 +1,16 @@
+// Servidor fake só para o Render não derrubar
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Bot está rodando!");
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log("Servidor web iniciado na porta " + PORT);
+});
+
 const { Client, GatewayIntentBits } = require('discord.js');
 const axios = require('axios');
 
