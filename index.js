@@ -1,3 +1,4 @@
+console.log("ARQUIVO INICIOU EXECUÇÃO");
 console.log("TOKEN existe?", !!process.env.TOKEN);
 
 // ================================
@@ -108,9 +109,13 @@ client.on("messageCreate", async (message) => {
 // ================================
 // LOGIN
 // ================================
+console.log("ANTES DO LOGIN");
+
 client.login(process.env.TOKEN)
   .then(() => console.log("Login realizado com sucesso"))
   .catch(err => {
     console.error("Erro ao logar no Discord:", err);
     process.exit(1);
   });
+  
+  console.log("DEPOIS DO LOGIN");
