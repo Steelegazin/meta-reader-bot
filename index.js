@@ -101,4 +101,5 @@ console.log("--------------------------");
 });
 
 // COLOQUE SEU TOKEN AQUI
+console.log("TOKEN carregado:", process.env.TOKEN);
 client.login(process.env.TOKEN);
