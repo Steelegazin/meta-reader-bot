@@ -1,3 +1,5 @@
+console.log("TOKEN existe?", !!process.env.TOKEN);
+
 // ================================
 // EXPRESS (necessário para Render)
 // ================================
